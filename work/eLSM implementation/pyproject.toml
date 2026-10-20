@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elsm-su3-reference"
+version = "0.2.0"
+description = "Auditable SU(3) eLSM numerical baseline with Polyakov and thermal mass corrections"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

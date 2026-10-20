@@ -1,0 +1,28 @@
+# Version control holds ONLY the solver (work/eLSM implementation).
+# Everything else — paper archive, paper checks, reports, literature, screenshots, zips — stays local.
+
+# ignore everything at the top level ...
+/*
+!/.gitignore
+
+# ... except the solver directory
+!/work/
+/work/*
+!/work/eLSM implementation/
+
+# reports and generated outputs inside the solver directory
+/work/eLSM implementation/results/
+/work/eLSM implementation/AUDIT_NOTES.md
+/work/eLSM implementation/EXTERNAL_CROSSCHECK.md
+/work/eLSM implementation/**/*.png
+/work/eLSM implementation/**/*.csv
+
+# Python / tooling caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
